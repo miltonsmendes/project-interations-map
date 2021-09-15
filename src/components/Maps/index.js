@@ -3,11 +3,19 @@ import Modal from 'react-modal';
 import { FeatureGroup, MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
 import { Form } from '@unform/web';
-import InputEventForm from '../InputEventForm';
+import { Button } from 'reactstrap';
+import InputForm from '../InputForm';
+import SelectForm from '../SelectForm';
+import EventFormular from '../EventFormular';
+
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 import './styles.css';
+
 
 
 const Maps = () => { //: React.FC<any>
@@ -76,25 +84,16 @@ const Maps = () => { //: React.FC<any>
                 className="modal-container"
             >
                 <h1>Hello world</h1>
-                <Form onSubmit={handleSubmit}>
+                {/* <Form onSubmit={handleSubmit}>
 
                     <div>
-                        <span>Início</span><InputEventForm name="name" />
+                        <span>Início</span><InputForm name="name" />
+                        <SelectForm name="selecao"/>
                     </div>
-                    <div>
-                        <span>Término</span><InputEventForm name="name" />
-                    </div>
-                    <div>
-                        <span>Tipo</span><InputEventForm name="name" />
-                    </div>
-                    <div>
-                        <span>Descrição</span><InputEventForm name="name" />
-                    </div>
-                    <div>
-                        <span>Vínculo</span><InputEventForm name="name" />
-                    </div>
-                    <button type="submit">Enviar</button>
-                </Form>
+                    
+                    <Button color="danger">Danger!</Button>
+                </Form> */}
+                <EventFormular />
             </Modal>
         </>
     );
